@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://cdb2ah27te2td"]
+
+[ext_resource type="Texture2D" uid="uid://conwix268waea" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 01.png" id="1_2im1b"]
+[ext_resource type="Texture2D" uid="uid://8sycugds2l6b" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 02.png" id="2_nh7mc"]
+[ext_resource type="Texture2D" uid="uid://ctemp8humw15g" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 03.png" id="3_1cwfo"]
+[ext_resource type="Texture2D" uid="uid://c7flmfl3tnrv6" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 04.png" id="4_ijbjn"]
+[ext_resource type="Texture2D" uid="uid://shr5m35nib7r" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 05.png" id="5_suvox"]
+[ext_resource type="Texture2D" uid="uid://n2gq80xx3t6c" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 06.png" id="6_jixgx"]
+[ext_resource type="Texture2D" uid="uid://8y5axt60k443" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 07.png" id="7_6ngae"]
+[ext_resource type="Texture2D" uid="uid://sj5b4mp78r21" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 08.png" id="8_pr7xo"]
+[ext_resource type="Texture2D" uid="uid://b6d0l71fix7ho" path="res://Assetis/Palm Tree Island/Sprites/Objects/Flag/Flag 09.png" id="9_00jtw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdrkb"]
+animations = [{
+"frames": [{
+"duration": 8.0,
+"texture": ExtResource("1_2im1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nh7mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1cwfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ijbjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_suvox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jixgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6ngae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pr7xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_00jtw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_wdrkb")

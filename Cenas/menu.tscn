@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1ro88yyedmaa"]
+
+[ext_resource type="Script" uid="uid://crf174mc6hxs0" path="res://Scripts/menu.gd" id="1_pveh2"]
+[ext_resource type="Texture2D" uid="uid://muo2fr8fmj60" path="res://Assetis/Palm Tree Island/Sprites/Background/BG Image.png" id="2_eheat"]
+[ext_resource type="Texture2D" uid="uid://riobb7hpe3ej" path="res://Assetis/Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="3_fapvr"]
+[ext_resource type="Texture2D" uid="uid://uftsjelud8td" path="res://Assetis/Palm Tree Island/Sprites/Background/Big Clouds.png" id="4_kdsmm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1n12"]
+font_size = 64
+shadow_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_vpgfy"]
+font_size = 32
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lfl8"]
+
+[sub_resource type="Animation" id="Animation_plcv4"]
+resource_name = "movimento"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmallCloud1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_fapvr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SmallCloud1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(546.59796, 182.8716), Vector2(19.059456, 150.89406)]
+}
+
+[sub_resource type="Animation" id="Animation_8aipq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SmallCloud1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_fapvr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SmallCloud1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19.059456, 150.89406)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1evsv"]
+_data = {
+&"RESET": SubResource("Animation_8aipq"),
+&"movimento": SubResource("Animation_plcv4")
+}
+
+[node name="Menu" type="Node2D"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD"]
+offset_top = 278.0
+offset_right = 160.0
+offset_bottom = 394.0
+
+[node name="ESCOLHER FASE" type="Button" parent="HUD/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ESCOLHER FASE"
+
+[node name="INICIAR" type="Button" parent="HUD/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "INICIAR"
+
+[node name="SAIR" type="Button" parent="HUD/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SAIR"
+
+[node name="NOME DO JOGO" type="Label" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -233.0
+offset_right = 356.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PIRATAS DO CABIRE
+"
+label_settings = SubResource("LabelSettings_u1n12")
+
+[node name="MENU" type="Label" parent="HUD"]
+offset_left = 28.0
+offset_top = 233.0
+offset_right = 124.0
+offset_bottom = 278.0
+text = "MENU"
+label_settings = SubResource("LabelSettings_vpgfy")
+script = ExtResource("1_pveh2")
+
+[node name="ambiente" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ambiente"]
+sprite_frames = SubResource("SpriteFrames_8lfl8")
+
+[node name="aguatransparente" type="Node2D" parent="ambiente"]
+
+[node name="Barco" type="Node2D" parent="ambiente"]
+
+[node name="Background" type="Node2D" parent="."]
+scale = Vector2(1.469087, 1.0007021)
+
+[node name="BgImage" type="Sprite2D" parent="Background"]
+position = Vector2(571.78375, 357.74884)
+scale = Vector2(3.4413073, 7.48911)
+texture = ExtResource("2_eheat")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+libraries = {
+&"": SubResource("AnimationLibrary_1evsv")
+}
+speed_scale = 0.3
+
+[node name="SmallCloud1" type="Sprite2D" parent="Background"]
+position = Vector2(19.059456, 150.89406)
+scale = Vector2(-1.3489813, 2.1695507)
+texture = ExtResource("3_fapvr")
+
+[node name="BigClouds" type="Sprite2D" parent="."]
+position = Vector2(160, 471)
+texture = ExtResource("4_kdsmm")
+
+[node name="BigClouds2" type="Sprite2D" parent="."]
+position = Vector2(606, 477)
+texture = ExtResource("4_kdsmm")
+
+[node name="BigClouds3" type="Sprite2D" parent="."]
+position = Vector2(1049, 478)
+texture = ExtResource("4_kdsmm")
+
+[connection signal="pressed" from="HUD/VBoxContainer/ESCOLHER FASE" to="HUD/MENU" method="_on_escolher_fase_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/INICIAR" to="HUD/MENU" method="_on_iniciar_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/SAIR" to="HUD/MENU" method="_on_sair_pressed"]

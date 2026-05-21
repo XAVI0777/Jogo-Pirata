@@ -1,0 +1,195 @@
+[gd_scene load_steps=49 format=3 uid="uid://bh2nmyba6o83"]
+
+[ext_resource type="Script" uid="uid://bjdrm40c2mrpf" path="res://Scripts/boss.gd" id="1_a2e0b"]
+[ext_resource type="Texture2D" uid="uid://cxsg3462g7cwr" path="res://ASSETS 2/Sprites/6-Enemy-Whale/1-Idle/1.png" id="1_b53ye"]
+[ext_resource type="Texture2D" uid="uid://bcfjc8fn1p4kt" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/1.png" id="2_a2e0b"]
+[ext_resource type="Texture2D" uid="uid://cnlbvkilde0mi" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/2.png" id="3_mxhql"]
+[ext_resource type="Texture2D" uid="uid://c7b8hkmm0pcce" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/3.png" id="4_ykgeb"]
+[ext_resource type="Texture2D" uid="uid://bhyjvaicnhd41" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/4.png" id="5_ovqjc"]
+[ext_resource type="Texture2D" uid="uid://bpgxkcjbfgd8c" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/5.png" id="6_h6dxd"]
+[ext_resource type="Texture2D" uid="uid://clut7a0om245w" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/6.png" id="7_o6ota"]
+[ext_resource type="Texture2D" uid="uid://c181jgiswswnw" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/7.png" id="8_1s6fu"]
+[ext_resource type="Texture2D" uid="uid://b2rvpgy4ktpl0" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/8.png" id="9_6520t"]
+[ext_resource type="Texture2D" uid="uid://bwgsmrbb2d02g" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/9.png" id="10_xi86f"]
+[ext_resource type="Texture2D" uid="uid://dqr1cfrmtmlan" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/10.png" id="11_7pipe"]
+[ext_resource type="Texture2D" uid="uid://l20bkpjikwoc" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/11.png" id="12_4dtm1"]
+[ext_resource type="Texture2D" uid="uid://5pvtk2tsvx6n" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/12.png" id="13_75kac"]
+[ext_resource type="Texture2D" uid="uid://dmd0h5vg4usoj" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/13.png" id="14_wdk4a"]
+[ext_resource type="Texture2D" uid="uid://bmjc41q8bd4lc" path="res://ASSETS 2/Sprites/6-Enemy-Whale/2-Run/14.png" id="15_7l736"]
+[ext_resource type="Texture2D" uid="uid://b1wlp5b7iuel4" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/1.png" id="16_4o4y6"]
+[ext_resource type="Texture2D" uid="uid://8bm0unnqao5m" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/2.png" id="17_7howp"]
+[ext_resource type="Texture2D" uid="uid://cfhjbihp7i1t5" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/3.png" id="18_xupbt"]
+[ext_resource type="Texture2D" uid="uid://dd3l5vghyh58u" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/4.png" id="19_j8sjy"]
+[ext_resource type="Texture2D" uid="uid://bu414h0hidh3v" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/5.png" id="20_rc2db"]
+[ext_resource type="Texture2D" uid="uid://c5n330nobes4o" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/6.png" id="21_6nw7o"]
+[ext_resource type="Texture2D" uid="uid://b1ytrhmvrqnwt" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/7.png" id="22_11ub2"]
+[ext_resource type="Texture2D" uid="uid://c3tpoyqctorrx" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/8.png" id="23_bwm3w"]
+[ext_resource type="Texture2D" uid="uid://baup0h46k08o6" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/9.png" id="24_yuxoh"]
+[ext_resource type="Texture2D" uid="uid://bpah3n16e4h5i" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/10.png" id="25_xx7he"]
+[ext_resource type="Texture2D" uid="uid://d12nl13m03y0w" path="res://ASSETS 2/Sprites/6-Enemy-Whale/7-Attack/11.png" id="26_3ydct"]
+[ext_resource type="Texture2D" uid="uid://gy3hjwp5ktyv" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/1.png" id="27_tv17g"]
+[ext_resource type="Texture2D" uid="uid://dief6sprggptb" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/2.png" id="28_8txly"]
+[ext_resource type="Texture2D" uid="uid://e1h1eudh84bo" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/3.png" id="29_ks0hn"]
+[ext_resource type="Texture2D" uid="uid://b20ocutamqe7m" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/4.png" id="30_ifx8y"]
+[ext_resource type="Texture2D" uid="uid://bju30ikwu3uwp" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/5.png" id="31_48gcc"]
+[ext_resource type="Texture2D" uid="uid://c412u27nigyxw" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/6.png" id="32_fs6on"]
+[ext_resource type="Texture2D" uid="uid://cd84vovcnmfi1" path="res://ASSETS 2/Sprites/6-Enemy-Whale/9-Hit/7.png" id="33_8ujt5"]
+[ext_resource type="Texture2D" uid="uid://bx5ar1lmmu6mm" path="res://ASSETS 2/Sprites/6-Enemy-Whale/11-Dead Ground/1.png" id="34_jko1l"]
+[ext_resource type="Texture2D" uid="uid://dlap8x10dlyox" path="res://ASSETS 2/Sprites/6-Enemy-Whale/11-Dead Ground/2.png" id="35_kd546"]
+[ext_resource type="Texture2D" uid="uid://sdp8fvpdxflv" path="res://ASSETS 2/Sprites/6-Enemy-Whale/11-Dead Ground/3.png" id="36_1u8jb"]
+[ext_resource type="Texture2D" uid="uid://b7r4ctjybiq5d" path="res://ASSETS 2/Sprites/6-Enemy-Whale/11-Dead Ground/4.png" id="37_i6ldr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ap32w"]
+height = 50.0
+
+[sub_resource type="Animation" id="Animation_chvbj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_b53ye")]
+}
+
+[sub_resource type="Animation" id="Animation_0wb4h"]
+resource_name = "attack"
+length = 1.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("16_4o4y6"), ExtResource("17_7howp"), ExtResource("18_xupbt"), ExtResource("19_j8sjy"), ExtResource("20_rc2db"), ExtResource("21_6nw7o"), ExtResource("22_11ub2"), ExtResource("23_bwm3w"), ExtResource("24_yuxoh"), ExtResource("25_xx7he"), ExtResource("26_3ydct")]
+}
+
+[sub_resource type="Animation" id="Animation_7c37s"]
+resource_name = "death"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("34_jko1l"), ExtResource("35_kd546"), ExtResource("36_1u8jb"), ExtResource("37_i6ldr")]
+}
+
+[sub_resource type="Animation" id="Animation_7xuod"]
+resource_name = "hit"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("27_tv17g"), ExtResource("28_8txly"), ExtResource("29_ks0hn"), ExtResource("30_ifx8y"), ExtResource("31_48gcc"), ExtResource("32_fs6on"), ExtResource("33_8ujt5")]
+}
+
+[sub_resource type="Animation" id="Animation_gi0is"]
+resource_name = "run"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_a2e0b"), ExtResource("1_b53ye"), ExtResource("3_mxhql"), ExtResource("4_ykgeb"), ExtResource("5_ovqjc"), ExtResource("6_h6dxd"), ExtResource("7_o6ota"), ExtResource("8_1s6fu"), ExtResource("9_6520t"), ExtResource("10_xi86f"), ExtResource("11_7pipe"), ExtResource("12_4dtm1"), ExtResource("13_75kac"), ExtResource("14_wdk4a"), ExtResource("15_7l736")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojq3g"]
+_data = {
+&"RESET": SubResource("Animation_chvbj"),
+&"attack": SubResource("Animation_0wb4h"),
+&"death": SubResource("Animation_7c37s"),
+&"hit": SubResource("Animation_7xuod"),
+&"run": SubResource("Animation_gi0is")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqs6x"]
+radius = 20.0
+height = 72.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2754h"]
+bg_color = Color(0.6, 0, 0.019607844, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y44j"]
+bg_color = Color(0, 0.6, 0, 1)
+
+[node name="BOSS" type="CharacterBody2D" groups=["inimigo"]]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_a2e0b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 28)
+texture = ExtResource("1_b53ye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 43)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ap32w")
+debug_color = Color(0.9490196, 0, 0.015686275, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ojq3g")
+}
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true
+
+[node name="MovementTimer" type="Timer" parent="."]
+
+[node name="AttackArea" type="Area2D" parent="." groups=["inimigo"]]
+position = Vector2(47, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(-47, 31)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_aqs6x")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -34.0
+offset_top = -14.0
+offset_right = 47.0
+offset_bottom = -1.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2754h")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4y44j")
+max_value = 50.0
+value = 50.0
+show_percentage = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 36)
+target_position = Vector2(-40, 25)
+collision_mask = 6

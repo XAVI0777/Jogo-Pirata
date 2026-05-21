@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk2w0cpnq2exw"]
+
+[ext_resource type="Script" uid="uid://ddix2wxyekyhg" path="res://barrel.gd" id="1_n3eid"]
+[ext_resource type="Texture2D" uid="uid://btabh57p7faqs" path="res://Assetis/Merchant Ship/Sprites/Barrel/Idle/1.png" id="1_yvipf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n3eid"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_53e0p"]
+
+[node name="Barrel" type="RigidBody2D" groups=["barril"]]
+collision_layer = 16
+collision_mask = 5
+script = ExtResource("1_n3eid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yvipf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_n3eid")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_53e0p")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

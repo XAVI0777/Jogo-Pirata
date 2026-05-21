@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://ixw7ud2i3i7"]
+
+[ext_resource type="Texture2D" uid="uid://b5dbuery030mn" path="res://Assetis/Pirate Treasure/Sprites/Gold Coin/01.png" id="1_kpn3i"]
+[ext_resource type="Script" uid="uid://dftc2yhygj8qk" path="res://moeda.gd" id="1_yr5fv"]
+[ext_resource type="Texture2D" uid="uid://0rfc8mfa46gi" path="res://Assetis/Pirate Treasure/Sprites/Gold Coin/02.png" id="2_yr5fv"]
+[ext_resource type="Texture2D" uid="uid://bm4lbexojxn46" path="res://Assetis/Pirate Treasure/Sprites/Gold Coin/03.png" id="3_4x05f"]
+[ext_resource type="Texture2D" uid="uid://bs6to33vts02h" path="res://Assetis/Pirate Treasure/Sprites/Gold Coin/04.png" id="4_1kyoo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s81j4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kpn3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yr5fv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4x05f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1kyoo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n85yn"]
+radius = 6.0827627
+
+[node name="Moeda" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_yr5fv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s81j4")
+autoplay = "default"
+frame_progress = 0.21798918
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n85yn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

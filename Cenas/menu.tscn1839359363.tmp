@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1ro88yyedmaa"]
+
+[ext_resource type="Script" uid="uid://crf174mc6hxs0" path="res://Scripts/menu.gd" id="1_pveh2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1n12"]
+font_size = 64
+shadow_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_vpgfy"]
+font_size = 32
+
+[node name="Menu" type="Node2D"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD"]
+offset_left = 28.0
+offset_top = 442.0
+offset_right = 158.0
+offset_bottom = 543.0
+
+[node name="ESCOLHER FASE" type="Button" parent="HUD/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "ESCOLHER FASE"
+
+[node name="INICIAR" type="Button" parent="HUD/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "INICIAR"
+
+[node name="SAIR" type="Button" parent="HUD/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SAIR"
+
+[node name="NOME DO JOGO" type="Label" parent="HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "PIRATAS DO CABIRE
+"
+label_settings = SubResource("LabelSettings_u1n12")
+
+[node name="MENU" type="Label" parent="HUD"]
+offset_left = 56.0
+offset_top = 393.0
+offset_right = 152.0
+offset_bottom = 438.0
+text = "MENU"
+label_settings = SubResource("LabelSettings_vpgfy")
+script = ExtResource("1_pveh2")
+
+[connection signal="pressed" from="HUD/VBoxContainer/ESCOLHER FASE" to="HUD/MENU" method="_on_escolher_fase_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/INICIAR" to="HUD/MENU" method="_on_iniciar_pressed"]
+[connection signal="pressed" from="HUD/VBoxContainer/SAIR" to="HUD/MENU" method="_on_sair_pressed"]
